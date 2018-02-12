@@ -1,12 +1,12 @@
 import React from 'react';
-import logo from '../../assets/img/logo.png';
+import { NavbarBrand } from 'reactstrap';
+import logo from '../../assets/img/logo.svg';
 
 const Logo = props => (
-  <div className="col-md-3 logo">
-    <a href="/" title="Back to Home">
-      <img src={logo} alt="Logo" className="logo_img" />
-    </a>
-  </div>
+  <NavbarBrand href="/">
+    <img src={logo} width="30" height="30" className="d-inline-block align-top" alt="" />
+    &nbsp;Digital Machine
+  </NavbarBrand>
 );
 
 export default Logo;
