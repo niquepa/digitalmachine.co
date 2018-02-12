@@ -2,4 +2,28 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: #fff;
+  background-color: #fff;
+}
+
+#layout{
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: 0.5s all ease;
+  -moz-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  -ms-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+.layout-wide{
+  max-width: 100%;
+  margin: auto;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-transition: 0.5s all ease;
+  -moz-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  -ms-transition: 0.5s all ease;
+  transition: 0.5s all ease;
 }
