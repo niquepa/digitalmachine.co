@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarToggler } from 'reactstrap';
+import { Container, Navbar, NavbarToggler } from 'reactstrap';
 import Logo from './Logo';
 import Navigation from './Navigation';
 
@@ -14,11 +14,13 @@ class Header extends Component {
   }
   render() {
     return (
-      <Navbar sticky="top" color="dark" dark expand="md">
-        <Logo />
-        <NavbarToggler onClick={this.toggle} />
-        <Navigation isOpen={this.state.isOpen} />
-      </Navbar>
+      <Container>
+        <Navbar sticky="top" color="primary" dark expand="md">
+          <Logo />
+          <NavbarToggler onClick={this.toggle} />
+          <Navigation isOpen={this.state.isOpen} />
+        </Navbar>
+      </Container>
     );
   }
 }

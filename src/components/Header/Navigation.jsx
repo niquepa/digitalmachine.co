@@ -8,19 +8,19 @@ class Navigation extends Component {
       <Collapse isOpen={isOpen} navbar>
         <Nav className="ml-auto" navbar>
           <NavItem>
-            <NavLink href="#">Servicios</NavLink>
+            <NavLink href="#">SERVICIOS</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Proceso</NavLink>
+            <NavLink href="#">PROCESO</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Portafolio</NavLink>
+            <NavLink href="#">CLIENTES</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Nosotros</NavLink>
+            <NavLink href="#">NOSOTROS</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Contaco</NavLink>
+            <NavLink href="#">CONTACTO</NavLink>
           </NavItem>
         </Nav>
       </Collapse>

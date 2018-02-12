@@ -5,9 +5,9 @@ import Header from '../Header/Header';
 class App extends Component {
   render() {
     return (
-      <Container >
+      <div className="layout-wide bg-primary" >
         <Header />
-      </Container>
+      </div>
     );
   }
 }
