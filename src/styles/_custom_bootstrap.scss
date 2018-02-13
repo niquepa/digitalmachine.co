@@ -1,35 +1,47 @@
-// New color
-$new-color: #ad9a5b;
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black:    #000 !default;
-$blue:    #007bff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
+.navbar-dark .navbar-nav .nav-link {
+  color: $white;
+  font-weight: lighter;
+}
 
-// Array of colors from _variables.scss
-$theme-colors: (
-        primary: $new-color,
-        secondary: $gray-600,
-        success: $green,
-        info: $cyan,
-        warning: $yellow,
-        danger: $red,
-        light: $gray-100,
-        dark: $gray-800
-) !default;
+.navbar-dark .nav-item.active .nav-link,
+.navbar-dark .nav-item .nav-link:hover {
+  color: $red;
+  font-weight: lighter;
+}
+
+.nav-tabs .nav-item.show .nav-link {
+  color: $green;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+.layout-wide{
+  max-width: 100%;
+  margin: auto;
+  padding: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-transition: 0.5s all ease;
+  -moz-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  -ms-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+.slider {
+  height: 597px;
+}
+
+//.carousel-item img {
+//  width: 100%;
+//}

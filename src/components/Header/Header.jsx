@@ -14,13 +14,15 @@ class Header extends Component {
   }
   render() {
     return (
-      <Container>
-        <Navbar sticky="top" color="primary" dark expand="md">
-          <Logo />
-          <NavbarToggler onClick={this.toggle} />
-          <Navigation isOpen={this.state.isOpen} />
-        </Navbar>
-      </Container>
+      <div className="layout-wide bg-primary" >
+        <Container>
+          <Navbar sticky="top" color="primary" dark expand="md">
+            <Logo />
+            <NavbarToggler onClick={this.toggle} />
+            <Navigation isOpen={this.state.isOpen} />
+          </Navbar>
+        </Container>
+      </div>
     );
   }
 }

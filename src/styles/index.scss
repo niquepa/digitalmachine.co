@@ -1,5 +1,8 @@
 // My Bootstrap configuration
-@import 'custom_bootstrap';
+@import 'custom_bootstrap_variables';
 
 // Bootstrap library
 @import 'bootstrap/scss/bootstrap';
+
+// My Bootstrap configuration
+@import 'custom_bootstrap';
