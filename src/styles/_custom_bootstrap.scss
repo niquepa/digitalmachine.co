@@ -39,9 +39,26 @@ body {
 }
 
 .slider {
-  height: 597px;
+  //position: absolute;
+  height: 100%;
 }
 
-//.carousel-item img {
-//  width: 100%;
-//}
+.carousel-item img {
+  width: 100%;
+}
+
+.carousel-inner {
+  //position: relative;
+  //width: 100%;
+  //max-height:100vh;
+  //overflow: hidden;
+}
+
+.carousel-item{
+  max-height: 95vh;
+  min-width: 100%;
+}
+
+.carousel {
+  height: 90%;
+}
