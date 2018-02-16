@@ -11,9 +11,15 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
-  padding: 5px 0 15px 0;
+  padding: 0.313em 0 0.939em 0;
   margin: 0;
   color: #403e3d;
+}
+
+p {
+  margin: 0 0 1.25em 0;
+  padding: 0;
+  font-weight: 300;
 }
 
 .layout-wide{
@@ -119,4 +125,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .info-vertical span {
   color: $red;
+}
+
+.paddings {
+  padding: 70px 0;
+}
+
+.service-item {
+  text-align: center;
+}
+
+.service-item .caption-service-item h3 {
+  font-weight: lighter;
+  padding: 10px 0;
 }
