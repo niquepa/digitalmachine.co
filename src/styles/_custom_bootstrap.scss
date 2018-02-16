@@ -4,9 +4,16 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: $gray-600;
   text-align: left;
   background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  padding: 5px 0 15px 0;
+  margin: 0;
+  color: #403e3d;
 }
 
 .layout-wide{
@@ -46,7 +53,7 @@ body {
 // ***************
 .carousel-item img {
   width: 100%;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .carousel-item{
@@ -56,9 +63,60 @@ body {
 .carousel-caption h3  {
   font-size: 2.5em;
   font-weight: bolder;
+  color: $white;
 }
 
 .carousel-caption p  {
   font-size: 2em;
   font-weight: 300;
+}
+
+// ***************
+// SERVICES
+// ***************
+.vertical-line {
+  width: 1px;
+  background: $gray-300;
+  margin: 0 auto;
+  height: 100px;
+  position: relative;
+}
+
+.vertical-line .circle-bottom {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $gray-600;
+  position: absolute;
+  bottom: 0;
+  left: -3.5px;
+}
+
+.info-vertical {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+}
+
+.info-vertical h1 {
+  font-size: 2.5em;
+  letter-spacing: 0.056em;
+  line-height: 1.1;
+  font-weight: lighter;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.info-vertical p {
+  font-size: 1em;
+  line-height: 1.556em;
+  font-weight: lighter;
+  margin: 0;
+  width: 100%;
+}
+
+.info-vertical span {
+  color: $red;
 }
