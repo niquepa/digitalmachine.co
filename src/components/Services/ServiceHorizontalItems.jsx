@@ -7,7 +7,7 @@ class ServiceHorizontalItems extends Component {
   state = {
     data: null,
   }
-  
+
   componentDidMount = () => {
     const data = getData(this.props.data);
     this.setState({ data });
@@ -20,7 +20,7 @@ class ServiceHorizontalItems extends Component {
         <Container>
           <div className="row">
             {items && items.map(item => (
-              <div className="col-sm-6 col-md-4">
+              <div key={item.caption} className="col-sm-6 col-md-4">
                 <div className="service-item">
                   <div className="icon-header">
                     <i className={`${item.icon} fa-2x`} />
