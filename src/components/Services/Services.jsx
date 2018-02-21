@@ -6,8 +6,14 @@ class Services extends Component {
   render() {
     return (
       <div>
-        <ServicesHorizontal data="web" />
-        <ServiceHorizontalItems data="webItems" />
+        <div>
+          <ServicesHorizontal data="web" />
+          <ServiceHorizontalItems data="webItems" />
+        </div>
+        <div className="borders gray-background">
+          <ServicesHorizontal data="media" />
+          <ServiceHorizontalItems data="mediaItems" />
+        </div>
       </div>
     );
   }
