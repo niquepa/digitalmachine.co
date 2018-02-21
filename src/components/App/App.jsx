@@ -1,13 +1,15 @@
-import React        from 'react';
-import Header       from '../Header/Header';
-import Slider       from '../Slider/Slider';
-import Services     from "../Services/Services";
+import React from 'react';
+import Header from '../Header/Header';
+import Slider from '../Slider/Slider';
+import Services from '../Services/Services';
+import Video from '../Video/Video';
 
 const App = props => (
   <div>
-    <Header />
-    <Slider />
+    <Header/>
+    <Video />
     <Services />
+    <Slider />
   </div>
 );
 

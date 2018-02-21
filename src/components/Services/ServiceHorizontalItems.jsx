@@ -14,12 +14,12 @@ class ServiceHorizontalItems extends Component {
   }
 
   render() {
-    const items = this.state.data;
+    const { data } = this.state;
     return (
       <div className="paddings">
         <Container>
           <div className="row">
-            {items && items.map(item => (
+            {data && data.map(item => (
               <div key={item.caption} className="col-sm-6 col-md-4">
                 <div className="service-item">
                   <div className="icon-header">

@@ -13,17 +13,17 @@ class ServicesHorizontal extends Component {
   }
 
   render() {
-    const item = this.state.data;
+    const { data } = this.state;
     return (
       <Container>
         <div className="vertical-line">
           <div className="circle-bottom" />
         </div>
-        {item &&
+        {data &&
           <div className="info-vertical">
-            <h1 dangerouslySetInnerHTML={{ __html: item.caption }} />
+            <h1 dangerouslySetInnerHTML={{ __html: data.caption }} />
             {/* TODO: Review lead class */}
-            <p className="lead">{item.altText}</p>
+            <p className="lead">{data.altText}</p>
           </div>
           }
       </Container>

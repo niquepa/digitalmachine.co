@@ -79,7 +79,7 @@ class Slider extends Component {
     ));
 
     return (
-      <div className="layout-wide bg-primary slider" >
+      <div className="layout-wide bg-primary" >
         <Carousel
           activeIndex={activeIndex}
           next={this.next}

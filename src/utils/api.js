@@ -1,3 +1,8 @@
+const video = {
+  caption: 'We are Digital Transformation',
+  altText: 'People do not buy goods and services. They buy relations, stories and magic',
+};
+
 const webService = {
   src: 'https://images.contentful.com/9kkanfiwhjvs/hK4MpKFX6EKQQSsOAg6kw/316c57c921b795c03d75d9709c7bafa5/pexels-photo-433604.jpeg?w=1440&h=960',
   altText: "We're your digital partner, closely collaborating to build an incredible online experience for your users We combine Technical expertise with Strategic planning to achieve your business goals.",
@@ -24,7 +29,7 @@ const webServiceItems = [
 
 const mediaService = {
   src: 'https://images.contentful.com/9kkanfiwhjvs/hK4MpKFX6EKQQSsOAg6kw/316c57c921b795c03d75d9709c7bafa5/pexels-photo-433604.jpeg?w=1440&h=960',
-  altText: "Whether you need a premium position on prominent websites, or the best priced network traffic, we excel at negotiating, buying, and tracking every detail of your digital media campaigns. With over 15 years experience in buying digital media, we are known for our results and getting things done when our competition can’t.",
+  altText: 'Whether you need a premium position on prominent websites, or the best priced network traffic, we excel at negotiating, buying, and tracking every detail of your digital media campaigns. With over 15 years experience in buying digital media, we are known for our results and getting things done when our competition can’t.',
   caption: 'Digital <span>Media</span>',
 };
 
@@ -48,6 +53,9 @@ const mediaServiceItems = [
 
 export const getData = (content) => {
   switch (content) {
+    case 'video':
+      return video;
+      break;
     case 'web':
       return webService;
       break;
