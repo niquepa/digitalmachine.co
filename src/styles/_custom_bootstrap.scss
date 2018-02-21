@@ -1,27 +1,25 @@
-.navbar-dark .navbar-nav .nav-link {
-  color: $white;
-  font-weight: lighter;
-}
-
-.navbar-dark .nav-item.active .nav-link,
-.navbar-dark .nav-item .nav-link:hover {
-  color: $red;
-  font-weight: lighter;
-}
-
-.nav-tabs .nav-item.show .nav-link {
-  color: $green;
-}
-
 body {
   margin: 0;
   font-family: 'Roboto Slab', serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: $gray-600;
   text-align: left;
   background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  padding: 0.313em 0 0.939em 0;
+  margin: 0;
+  color: #403e3d;
+}
+
+p {
+  margin: 0 0 1.25em 0;
+  padding: 0;
+  font-weight: 300;
 }
 
 .layout-wide{
@@ -38,10 +36,175 @@ body {
   transition: 0.5s all ease;
 }
 
-.slider {
-  height: 597px;
+.borders  {
+  border-top: 0.063em solid #eee;
+  border-bottom: 0.063em solid #eee;
 }
 
-//.carousel-item img {
-//  width: 100%;
-//}
+.gray-background {
+  background: #f5f5f5;
+  //padding: 4.375em 0;
+}
+
+// ***************
+// NAVIGATION
+// ***************
+.navbar-dark .navbar-nav .nav-link {
+  color: $white;
+  font-weight: lighter;
+}
+
+.navbar-dark .nav-item.active .nav-link,
+.navbar-dark .nav-item .nav-link:hover {
+  color: $red;
+  font-weight: lighter;
+}
+
+.nav-tabs .nav-item.show .nav-link {
+  color: $green;
+}
+
+// ***************
+// CAROUSEL
+// ***************
+.carousel-item img {
+  width: 100%;
+  opacity: 0.4;
+}
+
+.carousel-item{
+  max-height: 95vh;
+}
+
+.carousel-caption h3  {
+  font-size: 2.5em;
+  font-weight: bolder;
+  color: $white;
+}
+
+.carousel-caption p  {
+  font-size: 2em;
+  font-weight: 300;
+}
+
+// ***************
+// SERVICES
+// ***************
+.vertical-line {
+  width: 1px;
+  background: $gray-300;
+  margin: 0 auto;
+  height: 100px;
+  position: relative;
+}
+
+.vertical-line .circle-bottom {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $gray-600;
+  position: absolute;
+  bottom: 0;
+  left: -3.5px;
+}
+
+.info-vertical {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+}
+
+.info-vertical h1 {
+  font-size: 2.5em;
+  letter-spacing: 0.056em;
+  line-height: 1.1;
+  font-weight: lighter;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.info-vertical p {
+  font-size: 1em;
+  line-height: 1.556em;
+  font-weight: lighter;
+  margin: 0;
+  width: 100%;
+}
+
+.info-vertical span {
+  color: $red;
+}
+
+.paddings {
+  padding: 70px 0;
+}
+
+.service-item {
+  text-align: center;
+}
+
+.service-item .caption-service-item h3 {
+  font-weight: lighter;
+  padding: 0.625em 0;
+}
+
+.icon-header {
+  color: $red;
+}
+
+// ***************
+// VIDEO
+// ***************
+
+.video-container {
+  position: relative;
+  bottom: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: $black;
+}
+
+.video-container .title-container {
+  z-index: 1000;
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.video-container .title-container h1 {
+  color: $white;
+  font-size: 2em;
+}
+.video-container .description .inner {
+  font-size: 2em;
+  width: 45%;
+  margin: 0 auto;
+}
+
+.video-container video {
+  width: 100%;
+}
+
+@include media-breakpoint-up(sm) {
+  .video-container .title-container h1 {
+    font-size: 2.5em;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .video-container .title-container h1 {
+    font-size: 3em;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .video-container .title-container h1 {
+    font-size: 4em;
+  }
+}
