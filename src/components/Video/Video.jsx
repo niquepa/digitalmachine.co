@@ -30,7 +30,7 @@ class Video extends Component {
             </div>
           </div>
         </div>
-        <video autoPlay muted loop>
+        <video autoPlay muted playsInline loop>
           <source src={videoFile} type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
         </video>
       </div>
