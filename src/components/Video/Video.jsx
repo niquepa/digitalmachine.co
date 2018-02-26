@@ -31,7 +31,9 @@ class Video extends Component {
           </div>
         </div>
         <video autoPlay muted playsInline loop>
-          <source src={videoFile} type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+          <source src={videoFile} type="video/mp4" />
+          <source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm" />
+          Your browser does not support the video tag. I suggest you upgrade your browser.
         </video>
       </div>
     );
