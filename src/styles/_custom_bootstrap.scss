@@ -49,6 +49,10 @@ p {
 // ***************
 // NAVIGATION
 // ***************
+.navbar-dark .navbar-brand {
+  color: $text-highlight;
+}
+
 .navbar-dark .navbar-nav .nav-link {
   color: $white;
   font-weight: lighter;
@@ -56,7 +60,7 @@ p {
 
 .navbar-dark .nav-item.active .nav-link,
 .navbar-dark .nav-item .nav-link:hover {
-  color: $red;
+  color: $text-highlight;
   font-weight: lighter;
 }
 
@@ -134,7 +138,7 @@ p {
 }
 
 .info-vertical span {
-  color: $red;
+  color: $text-highlight;
 }
 
 .paddings {
@@ -151,7 +155,7 @@ p {
 }
 
 .icon-header {
-  color: $red;
+  color: $text-highlight;
 }
 
 // ***************
@@ -168,6 +172,17 @@ p {
   background: $black;
 }
 
+.video-container .overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  background: $black;
+  opacity: 0.5;
+}
+
 .video-container .title-container {
   z-index: 1000;
   position: absolute;
@@ -178,7 +193,7 @@ p {
 }
 
 .video-container .title-container h1 {
-  color: $white;
+  color: $text-highlight;
   font-size: 2em;
 }
 .video-container .description .inner {

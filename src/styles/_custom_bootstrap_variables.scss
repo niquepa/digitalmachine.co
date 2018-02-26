@@ -21,6 +21,11 @@ $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
+$gold:    #EEE8AA !default;
+$metallic-gold:   #D4AF37 !default;
+$text-highlight:  $metallic-gold !default;
+$text-primary:    $black !default;
+$text-secondary:  $white !default;
 
 // Array of colors from _variables.scss
 $theme-colors: (

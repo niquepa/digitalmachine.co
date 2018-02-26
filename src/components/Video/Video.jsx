@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import videoFile            from '../../assets/video/TimesSquareDM-short.mp4';
+import videoMp4             from '../../assets/video/TimesSquareDM-short.mp4';
+// import videoWebM            from '../../assets/video/TimesSquareDM-short.webm';
 import { getData }          from "../../utils/api";
 
 class Video extends Component {
@@ -16,6 +17,7 @@ class Video extends Component {
     const { data } = this.state;
     return (
       <div className="video-container">
+        <div className="overlay" />
         <div className="title-container">
           <div className="headline">
             { data && data.caption &&
@@ -31,9 +33,9 @@ class Video extends Component {
           </div>
         </div>
         <video autoPlay muted playsInline loop>
-          <source src={videoFile} type="video/mp4" />
-          <source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm" />
-          Your browser does not support the video tag. I suggest you upgrade your browser.
+          {/*<source src={videoWebM} type="video/webm" />*/}
+          <source src={videoMp4} type="video/mp4" />
+          <p>Your browser does not support the video tag. I suggest you upgrade your browser.</p>
         </video>
       </div>
     );
