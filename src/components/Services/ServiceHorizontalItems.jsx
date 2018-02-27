@@ -22,7 +22,7 @@ class ServiceHorizontalItems extends Component {
             {data && data.map(item => (
               <div key={item.caption} className="col-sm-6 col-md-4">
                 <div className="service-item">
-                  <div className="icon-header">
+                  <div className="luxury-color">
                     <i className={`${item.icon} fa-2x`} />
                   </div>
                   <div className="caption-service-item">

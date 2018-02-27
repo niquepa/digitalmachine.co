@@ -21,7 +21,7 @@ class ServicesHorizontal extends Component {
         </div>
         {data &&
           <div className="info-vertical">
-            <h1 dangerouslySetInnerHTML={{ __html: data.caption }} />
+            <h1 className="luxury-font" dangerouslySetInnerHTML={{ __html: data.caption }} />
             {/* TODO: Review lead class */}
             <p className="lead">{data.altText}</p>
           </div>

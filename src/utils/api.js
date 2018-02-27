@@ -1,6 +1,12 @@
+// const video = {
+//   caption: 'We are',
+//   secondLine: 'Digital Transformation',
+//   altText: 'People do not buy goods and services. They buy relations, stories and magic',
+// };
 const video = {
-  caption: 'We are Digital Transformation',
-  altText: 'People do not buy goods and services. They buy relations, stories and magic',
+  caption: 'DIGITAL MARKETING',
+  secondLine: 'for Leading Brands',
+  altText: 'DigitalMachine is an award-winning full service digital marketing agency that translates brand relationships into compelling online experiences that surpass marketing goals.',
 };
 
 const webService = {
