@@ -48,3 +48,5 @@ class Video extends Component {
 }
 
 export default Video;
+
+// TODO: convert video ffmpeg -i TimesSquareDM-short.mp4  -an -c:v libvpx-vp9 -crf 45 -b:v 0 TimesSquareDM-short.webm
