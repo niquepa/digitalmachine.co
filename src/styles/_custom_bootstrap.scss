@@ -126,7 +126,6 @@ p {
 }
 
 .info-vertical {
-  text-align: center;
   max-width: 850px;
   margin: 0 auto;
   z-index: 1;
@@ -145,7 +144,7 @@ p {
 .info-vertical p {
   font-size: 1em;
   line-height: 1.556em;
-  font-weight: lighter;
+  font-weight: 400;
   margin: 0;
   width: 100%;
 }
@@ -155,15 +154,21 @@ p {
 }
 
 .paddings {
-  padding: 70px 0;
+  padding: 3em 0;
 }
 
 .service-item {
-  text-align: center;
+  padding: 1.250em 0em;
 }
 
-.service-item .caption-service-item h3 {
-  font-weight: lighter;
+@include media-breakpoint-up(sm) {
+  .service-item {
+    padding: 0em;
+  }
+}
+
+.caption-service-item h3 {
+  //font-weight: lighter;
   padding: 0.625em 0;
 }
 
@@ -189,7 +194,7 @@ p {
   left: 0px;
   z-index: 2;
   background: $black;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .video-container .title-container {
@@ -197,7 +202,6 @@ p {
   position: absolute;
   top: 35%;
   width:100%;
-  //color: #fff;
 }
 
 .video-container .title-container h1 {
@@ -215,7 +219,6 @@ p {
 .video-container .description .inner {
   font-size: 1em;
   width: 45%;
-  text-align: left;
   letter-spacing: 0.05em;
   font-weight: 300;
 }

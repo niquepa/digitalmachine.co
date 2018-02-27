@@ -57,6 +57,30 @@ const mediaServiceItems = [
   },
 ];
 
+const consultingService = {
+  src: 'https://images.contentful.com/9kkanfiwhjvs/hK4MpKFX6EKQQSsOAg6kw/316c57c921b795c03d75d9709c7bafa5/pexels-photo-433604.jpeg?w=1440&h=960',
+  altText: 'Co-Creamos con nuestros clientes la visión de futuro paso a paso: Realizamos juntos un análisis de como están los activos digitales actuales, cuales son las necesidades y que es lo que nuestros clientes tienen como visión de futuro.',
+  caption: 'Consultoría <span>Digital</span>',
+};
+
+const consultingServiceItems = [
+  {
+    icon: 'fas fa-check-square',
+    altText: 'Generamos realmente plataformas que transforman la forma en la que se hacen los negocios, la transformación digital va mas allá de "digitalizar una compañía", lo que buscamos son  experiencias de usuario únicas y especiales con una interfaz ideal,  adaptada a los activos digitales de nuestros clientes.',
+    caption: 'Creamos recetas únicas',
+  },
+  {
+    icon: 'fas fa-check-square',
+    altText: 'La cantidad de información que estamos produciendo es tan grande que genera cambios sustanciales en los modelos de negocio, eso es Digital! Nosotros podemos ayudarlo a entender los cambios y expectativas que tienen los usuarios sobre los productos y servicios " los clientes ya no solo quieren productos y servicios, quieren experiencias simples y efectivas.',
+    caption: 'Generamos cambios',
+  },
+];
+
+const consultingImage = {
+  src: 'https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1511029166000/photosp/e0ef3f66-8136-47bd-9a05-1de2981a4a37/stock-photo-people-business-fun-office-game-puzzle-play-work-team-e0ef3f66-8136-47bd-9a05-1de2981a4a37.jpg',
+  altText: 'DigitalMachine - Consultoría Digital',
+}
+
 export const getData = (content) => {
   switch (content) {
     case 'video':
@@ -72,6 +96,12 @@ export const getData = (content) => {
       return mediaService;
     case 'mediaItems':
       return mediaServiceItems;
+    case 'consulting':
+      return consultingService;
+    case 'consultingItems':
+      return consultingServiceItems;
+    case 'consultingImage':
+      return consultingImage;
     default:
       return null;
   }

@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
-import ServicesHorizontal from './ServicesHorizontal';
+import React, { Component }   from 'react';
+import ServiceVertical       from './ServiceVertical';
+import ServiceVerticalItems   from './ServiceVerticalItems';
+import ServiceHorizontal     from './ServiceHorizontal';
 import ServiceHorizontalItems from './ServiceHorizontalItems';
 
 class Services extends Component {
@@ -7,12 +9,12 @@ class Services extends Component {
     return (
       <div>
         <div>
-          <ServicesHorizontal data="web" />
-          <ServiceHorizontalItems data="webItems" />
+          <ServiceVertical data="consulting" />
+          <ServiceVerticalItems data="consultingItems" image="consultingImage" />
         </div>
         <div className="borders gray-background">
-          <ServicesHorizontal data="media" />
-          <ServiceHorizontalItems data="mediaItems" />
+          <ServiceHorizontal data="web" />
+          <ServiceHorizontalItems data="webItems" />
         </div>
       </div>
     );
