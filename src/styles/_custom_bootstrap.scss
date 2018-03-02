@@ -62,6 +62,20 @@ p {
 // NAVIGATION
 // ***************
 
+nav.transparent {
+  background-color: $primary;
+}
+
+@include media-breakpoint-up(md) {
+  nav.transparent {
+    background-color: transparent;
+  }
+}
+
+nav.primary {
+  background-color: $primary;
+}
+
 .navbar-dark .navbar-brand {
   color: $metallic-luxury;
 }
