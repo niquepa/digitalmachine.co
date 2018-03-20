@@ -1,13 +1,15 @@
+import { loadContent } from './contentfulClient';
+
 // const video = {
-//   caption: 'We are',
+//   caption: 'We are Digital Transformation',
 //   secondLine: 'Digital Transformation',
 //   altText: 'People do not buy goods and services. They buy relations, stories and magic',
 // };
-const video = {
-  caption: 'DIGITAL MARKETING',
-  secondLine: 'for Leading Brands',
-  altText: 'DigitalMachine is an award-winning full service digital marketing agency that translates brand relationships into compelling online experiences that surpass marketing goals.',
-};
+// const video = {
+//   caption: 'DIGITAL MARKETING',
+//   secondLine: 'for Leading Brands',
+//   altText: 'DigitalMachine is an award-winning full service digital marketing agency that translates brand relationships into compelling online experiences that surpass marketing goals.',
+// };
 
 const webService = {
   src: 'https://images.contentful.com/9kkanfiwhjvs/hK4MpKFX6EKQQSsOAg6kw/316c57c921b795c03d75d9709c7bafa5/pexels-photo-433604.jpeg?w=1440&h=960',
@@ -79,12 +81,17 @@ const consultingServiceItems = [
 const consultingImage = {
   src: 'https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1511029166000/photosp/e0ef3f66-8136-47bd-9a05-1de2981a4a37/stock-photo-people-business-fun-office-game-puzzle-play-work-team-e0ef3f66-8136-47bd-9a05-1de2981a4a37.jpg',
   altText: 'DigitalMachine - Consultoría Digital',
-}
+};
+
+const getVideo = () => (
+  loadContent('homeVideo', 10)
+    .then(data => data[0].fields)
+);
 
 export const getData = (content) => {
   switch (content) {
     case 'video':
-      return video;
+      return getVideo();
       break;
     case 'web':
       return webService;
@@ -106,3 +113,4 @@ export const getData = (content) => {
       return null;
   }
 };
+
