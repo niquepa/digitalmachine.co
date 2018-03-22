@@ -1,16 +1,5 @@
 import { loadContent } from './contentfulClient';
 
-// const video = {
-//   caption: 'We are Digital Transformation',
-//   secondLine: 'Digital Transformation',
-//   altText: 'People do not buy goods and services. They buy relations, stories and magic',
-// };
-// const video = {
-//   caption: 'DIGITAL MARKETING',
-//   secondLine: 'for Leading Brands',
-//   altText: 'DigitalMachine is an award-winning full service digital marketing agency that translates brand relationships into compelling online experiences that surpass marketing goals.',
-// };
-
 const webService = {
   src: 'https://images.contentful.com/9kkanfiwhjvs/hK4MpKFX6EKQQSsOAg6kw/316c57c921b795c03d75d9709c7bafa5/pexels-photo-433604.jpeg?w=1440&h=960',
   altText: "We're your digital partner, closely collaborating to build an incredible online experience for your users We combine Technical expertise with Strategic planning to achieve your business goals.",
@@ -84,14 +73,23 @@ const consultingImage = {
 };
 
 const getVideo = () => (
-  loadContent('homeVideo', 10)
-    .then(data => data[0].fields)
+  loadContent('homeVideo', 1)
+    .then(data => (data[0] ? data[0].fields : ''))
+);
+
+const getServices = () => (
+  loadContent('service', 3)
+    .then(data => (data))
+    // .then(data => console.log(`SERVICE DATA: ${JSON.stringify(data)}`))
 );
 
 export const getData = (content) => {
   switch (content) {
     case 'video':
       return getVideo();
+      break;
+    case 'services':
+      return getServices();
       break;
     case 'web':
       return webService;
@@ -104,7 +102,7 @@ export const getData = (content) => {
     case 'mediaItems':
       return mediaServiceItems;
     case 'consulting':
-      return consultingService;
+      return getServices();
     case 'consultingItems':
       return consultingServiceItems;
     case 'consultingImage':
