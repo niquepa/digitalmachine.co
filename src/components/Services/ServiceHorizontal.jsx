@@ -1,34 +1,35 @@
-import React, { Component } from 'react';
+import React  from 'react';
 import { Container } from 'reactstrap';
-import { getData } from '../../utils/api';
+import ServiceHorizontalItems from './ServiceHorizontalItems';
 
-class ServiceHorizontal extends Component {
-  state = {
-    data: null,
-  }
-
-  componentDidMount = () => {
-    const data = getData(this.props.data);
-    this.setState({ data });
-  }
-
-  render() {
-    const { data } = this.state;
-    return (
+const ServiceHorizontal = (props) => {
+  const { data } = props;
+  console.log(`SERVICE HORIZONTAL ${data.title}: ${JSON.stringify(data)}`);
+  return (
+    <div>
       <Container>
         <div className="vertical-line">
           <div className="circle-bottom" />
         </div>
         {data &&
           <div className="info-vertical text-center">
-            <h1 className="luxury-font" dangerouslySetInnerHTML={{ __html: data.caption }} />
+            <h1 className="luxury-font" dangerouslySetInnerHTML={{ __html: data.title }} />
             {/* TODO: Review lead class */}
-            <p className="lead">{data.altText}</p>
+            <p className="lead">{data.description}</p>
           </div>
           }
       </Container>
-    );
-  }
-}
+      <div className="paddings">
+        <Container>
+          <div className="row">
+            {data.ServiceItems && data.ServiceItems.map(item => (
+              <ServiceHorizontalItems item={item} key={item.sys.id} />
+              ))}
+          </div>
+        </Container>
+      </div>
+    </div>
+  );
+};
 
 export default ServiceHorizontal;
