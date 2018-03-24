@@ -25,12 +25,12 @@ const mediaServiceItems = [
 ];
 
 const getVideo = () => (
-  loadContent('homeVideo', 1)
+  loadContent({ contentTypeId: 'homeVideo', limit: 1 })
     .then(data => (data[0] ? data[0].fields : ''))
 );
 
 const getServices = () => (
-  loadContent('service', 3)
+  loadContent({ contentTypeId: 'service', limit: 3, order: 'fields.order' })
     .then(data => (data))
     // .then(data => console.log(`SERVICE DATA: ${JSON.stringify(data)}`))
 );
