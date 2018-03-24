@@ -1,10 +1,9 @@
-import React  from 'react';
+import React from 'react';
 import { Container } from 'reactstrap';
 import ServiceHorizontalItems from './ServiceHorizontalItems';
 
 const ServiceHorizontal = (props) => {
   const { data } = props;
-  console.log(`SERVICE HORIZONTAL ${data.title}: ${JSON.stringify(data)}`);
   return (
     <div>
       <Container>

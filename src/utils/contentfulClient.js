@@ -5,9 +5,10 @@ export const client = createClient({
   accessToken: '632c0cfa1127702328cae06a9fe79b8af5d1ce9b2b9739bb25ea1cd7e6e096ed',
 });
 
-export const loadContent = (contentTypeId, limit) => (
+export const loadContent = (contentTypeId, limit, locale = 'en-US') => (
   client.getEntries({
     content_type: contentTypeId,
     limit,
+    locale,
   }).then(payload => payload.items)
 );
