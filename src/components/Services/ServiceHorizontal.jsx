@@ -1,23 +1,14 @@
 import React from 'react';
 import { Container } from 'reactstrap';
+import PropTypes from 'prop-types';
 import ServiceHorizontalItems from './ServiceHorizontalItems';
+import ServiceHeader from './ServiceHeader';
 
 const ServiceHorizontal = (props) => {
   const { data } = props;
   return (
-    <div>
-      <Container>
-        <div className="vertical-line">
-          <div className="circle-bottom" />
-        </div>
-        {data &&
-          <div className="info-vertical text-center">
-            <h1 className="luxury-font" dangerouslySetInnerHTML={{ __html: data.title }} />
-            {/* TODO: Review lead class */}
-            <p className="lead">{data.description}</p>
-          </div>
-          }
-      </Container>
+    <React.Fragment>
+      <ServiceHeader title={data.title} description={data.description} />
       <div className="paddings">
         <Container>
           <div className="row">
@@ -27,8 +18,12 @@ const ServiceHorizontal = (props) => {
           </div>
         </Container>
       </div>
-    </div>
+    </React.Fragment>
   );
+};
+
+ServiceHorizontal.propTypes = {
+  data: PropTypes.object,
 };
 
 export default ServiceHorizontal;

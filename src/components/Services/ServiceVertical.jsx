@@ -1,25 +1,16 @@
-import React  from 'react';
+import React from 'react';
 import { Container } from 'reactstrap';
+import PropTypes from 'prop-types';
 import ServiceVerticalItems from './ServiceVerticalItems';
+import ServiceHeader from './ServiceHeader';
 
 const ServiceVertical = (props) => {
   const { data } = props;
   const image = data.image.fields;
 
   return (
-    <div>
-      <Container>
-        <div className="vertical-line">
-          <div className="circle-bottom" />
-        </div>
-        {data &&
-          <div className="info-vertical text-center">
-            <h1 className="luxury-font" dangerouslySetInnerHTML={{ __html: data.title }} />
-            {/* TODO: Review lead class */}
-            <p className="lead">{data.description}</p>
-          </div>
-          }
-      </Container>
+    <React.Fragment>
+      <ServiceHeader title={data.title} description={data.description} />
       { data && data.ServiceItems &&
       <div className="paddings">
         <Container>
@@ -38,8 +29,12 @@ const ServiceVertical = (props) => {
         </Container>
       </div>
         }
-    </div>
+    </React.Fragment>
   );
+};
+
+ServiceVertical.propTypes = {
+  data: PropTypes.object,
 };
 
 export default ServiceVertical;
