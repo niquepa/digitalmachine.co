@@ -6,7 +6,7 @@ export const client = createClient({
 });
 
 export const loadContent = ({
-  contentTypeId, limit, locale = 'en-US', order = 'sys.createdAt',
+  contentTypeId, limit, locale = 'en-US', order = 'sys.updatedAt',
 }) => (
   client.getEntries({
     content_type: contentTypeId,

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Collapse, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 class Navigation extends Component {
   render() {
@@ -22,6 +22,19 @@ class Navigation extends Component {
           <NavItem>
             <NavLink href="#">CONTACTO</NavLink>
           </NavItem>
+          <UncontrolledDropdown nav inNavbar>
+            <DropdownToggle nav caret>
+              Language
+            </DropdownToggle>
+            <DropdownMenu right>
+              <DropdownItem>
+                English
+              </DropdownItem>
+              <DropdownItem>
+                Spanish
+              </DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
         </Nav>
       </Collapse>
     );
