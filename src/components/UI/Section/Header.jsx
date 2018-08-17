@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'reactstrap';
 import PropTypes from 'prop-types';
 
-const ServiceHeader = (props) => {
+const SectionHeader = (props) => {
   const { title, description } = props;
 
   return (
@@ -21,9 +21,9 @@ const ServiceHeader = (props) => {
   );
 };
 
-ServiceHeader.propTypes = {
+SectionHeader.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
 };
 
-export default ServiceHeader;
+export default SectionHeader;

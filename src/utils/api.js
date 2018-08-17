@@ -35,6 +35,11 @@ const getServices = () => (
     // .then(data => console.log(`SERVICE DATA: ${JSON.stringify(data)}`))
 );
 
+const getTechnologies = () => (
+  loadContent({ contentTypeId: 'technology', limit: 5, order: 'fields.order' })
+    .then(data => (data))
+);
+
 export const getData = (content) => {
   switch (content) {
     case 'video':
@@ -45,6 +50,8 @@ export const getData = (content) => {
       return mediaService;
     case 'mediaItems':
       return mediaServiceItems;
+    case 'technologies':
+      return getTechnologies();
     default:
       return null;
   }
