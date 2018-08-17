@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const ServiceHorizontalItems = (props) => {
+const SectionHorizontalItem = (props) => {
   const { item } = props;
   return (
     <div className="col-sm-6 col-md-4 text-center">
@@ -16,4 +17,9 @@ const ServiceHorizontalItems = (props) => {
   );
 };
 
-export default ServiceHorizontalItems;
+SectionHorizontalItem.propTypes = {
+  item: PropTypes.object,  // TODO: Validate object
+};
+
+
+export default SectionHorizontalItem;
