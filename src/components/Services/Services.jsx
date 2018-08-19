@@ -22,11 +22,11 @@ class Services extends Component {
     const services = this.state.data;
 
     return (
-      <div>
+      <React.Fragment>
         { services && services.map((service, index) => (
           <Section data={service.fields} key={service.sys.id} altBackground={altBackground(index)} />
         ))}
-      </div>
+      </React.Fragment>
     );
   }
 }

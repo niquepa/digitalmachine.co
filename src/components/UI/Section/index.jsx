@@ -9,12 +9,12 @@ const isHorizontalOrVertical = function (data) {
 
 const Section = (props) => {
   const { data, altBackground } = props;
-  const RenderService = isHorizontalOrVertical(data);
+  const RenderSection = isHorizontalOrVertical(data);
   const cssClass = altBackground ? 'borders gray-background' : '';
 
   return (
     <div className={cssClass}>
-      <RenderService data={data} />
+      <RenderSection data={data} />
     </div>
   );
 };

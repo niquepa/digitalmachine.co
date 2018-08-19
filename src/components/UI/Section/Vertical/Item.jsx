@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SectionHorizontalItem from '../Horizontal/Item';
 
 const SectionVerticalItem = (props) => {
   const { item } = props;
