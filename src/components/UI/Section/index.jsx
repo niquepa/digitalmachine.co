@@ -8,9 +8,10 @@ const isHorizontalOrVertical = function (data) {
 };
 
 const Section = (props) => {
-  const { data, altBackground } = props;
+  const { data, background } = props;
+
   const RenderSection = isHorizontalOrVertical(data);
-  const cssClass = altBackground ? 'borders gray-background' : '';
+  const cssClass = background ? 'borders gray-background' : '';
 
   return (
     <div className={cssClass}>
@@ -21,7 +22,7 @@ const Section = (props) => {
 
 Section.propTypes = {
   data: PropTypes.object, // TODO: Validate object
-  altBackground: PropTypes.boolean,
+  background: PropTypes.boolean,
 };
 
 export default Section;

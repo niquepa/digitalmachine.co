@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { getData } from '../../utils/api';
 
-class Technologies extends Component {
+class TechnologyListContainer extends Component {
   state = {
     data: null,
   }
@@ -42,4 +42,4 @@ class Technologies extends Component {
   }
 }
 
-export default Technologies;
+export default TechnologyListContainer;

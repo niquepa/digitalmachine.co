@@ -34,7 +34,7 @@ const SectionVertical = (props) => {
 };
 
 SectionVertical.propTypes = {
-  data: PropTypes.object,  // TODO: Validate object
+  data: PropTypes.object, // TODO: Validate object
 };
 
 export default SectionVertical;

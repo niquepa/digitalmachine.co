@@ -15,7 +15,7 @@ const mediaServiceItems = [
   {
     icon: 'fas fa-cart-arrow-down',
     altText: 'Local and international media buying, Research, planning and negotiating for all media, Campaign setup & optimization, Detailed transparent tracking and reporting, 24/7 access to transparent reporting, Creativity & production, Competitor reviews',
-    caption: 'Media Services',
+    caption: 'Media Service',
   },
   {
     icon: 'fab fa-buromobelexperte',

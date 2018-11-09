@@ -6,7 +6,7 @@ const altBackground = function (index) {
   return index % 2 === 0 ? false : true;
 };
 
-class Services extends Component {
+class ServiceListContainer extends Component {
   state = {
     data: null,
   }
@@ -24,11 +24,11 @@ class Services extends Component {
     return (
       <React.Fragment>
         { services && services.map((service, index) => (
-          <Section data={service.fields} key={service.sys.id} altBackground={altBackground(index)} />
+          <Section data={service.fields} key={service.sys.id} background={altBackground(index)} />
         ))}
       </React.Fragment>
     );
   }
 }
 
-export default Services;
+export default ServiceListContainer;
