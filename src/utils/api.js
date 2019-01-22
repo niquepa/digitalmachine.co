@@ -30,7 +30,7 @@ const getVideo = () => (
 );
 
 const getServices = () => (
-  loadContent({ contentTypeId: 'service', limit: 3, order: 'fields.order' })
+  loadContent({ contentTypeId: 'service', limit: 6, order: 'fields.order' })
     .then(data => (data))
     // .then(data => console.log(`SERVICE DATA: ${JSON.stringify(data)}`))
 );

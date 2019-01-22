@@ -3,7 +3,7 @@ import { getData } from '../../utils/api';
 import Section from '../UI/Section';
 
 const altBackground = function (index) {
-  return index % 2 === 0 ? false : true;
+  return index % 2 !== 0;
 };
 
 class Services extends Component {
