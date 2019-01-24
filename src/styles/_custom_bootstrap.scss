@@ -267,3 +267,96 @@ nav.primary {
     font-size: 4.5em;
   }
 }
+
+// ***************
+// CONTACT FORM
+// ***************
+
+address {
+  line-height: 35px;
+}
+
+address strong {
+  padding-right: 3px;
+}
+
+address i {
+  padding-right: 10px;
+}
+
+#form input{
+  width: 85%;
+  height: 35px;
+  margin-bottom: 20px;
+  border:1px solid #dedede;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+#form textarea{
+  width: 95%;
+  height: 150px;
+  font-size: 14px;
+  padding: 5px 10px;
+  border:1px solid #dedede;
+}
+#form .button{
+  width: auto;
+  height: auto;
+}
+#form #result{
+  font-size: bold;
+}
+
+.button{
+  width: auto;
+  border: 0;
+  color: #fff;
+  margin: 10px 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-weight: 300;
+  padding: 12px 25px;
+  text-shadow: 0 -1px 0 #ccc;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.button:hover{
+  color: #fff;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.btn-primary{
+  border: 0 !important;
+}
+.button i{
+  padding-right: 10px;
+  color: #232323;
+  font-size: 25px;
+}
+
+.sf-menu li li a:hover,
+.camera_wrap .camera_pag .camera_pag_ul li.cameracurrent > span,
+.camera_prevThumbs, .camera_nextThumbs, .camera_prev, .camera_next, .camera_commands, .camera_thumbs_cont,
+.camera_wrap .camera_pag .camera_pag_ul li.cameracurrent > span,
+.button,
+.btn-primary,
+.caption-head:hover,
+.flex-control-paging li a.flex-active,
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span,
+.info_skin_base,
+#theme-options .active,
+.service-02 .head-service-02 i,
+.post-date,
+.more-link a,
+.pagination > .active > a{
+  background-color: $metallic-luxury !important;
+  background: $metallic-luxury !important;
+}
