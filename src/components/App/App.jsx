@@ -1,16 +1,16 @@
 import React from 'react';
 import Header from '../Header/Header';
-import Slider from '../Slider/Slider';
-import Services from '../Services/Services';
 import Video from '../Video/Video';
+import Services from '../Services/Services';
+import Contact from '../Contact/Contact';
 
 const App = props => (
-  <div>
-    <Header/>
+  <React.Fragment>
+    <Header />
     <Video />
     <Services />
-    <Slider />
-  </div>
+    <Contact />
+  </React.Fragment>
 );
 
 export default App;

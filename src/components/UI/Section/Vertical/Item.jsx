@@ -1,6 +1,7 @@
-import React  from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const ServiceVerticalItems = (props) => {
+const SectionVerticalItem = (props) => {
   const { item } = props;
   return (
     <div className="service-item">
@@ -14,4 +15,8 @@ const ServiceVerticalItems = (props) => {
   );
 };
 
-export default ServiceVerticalItems;
+SectionVerticalItem.propTypes = {
+  item: PropTypes.object,  // TODO: Validate object
+};
+
+export default SectionVerticalItem;

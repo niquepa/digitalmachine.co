@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import Service from './Service';
 import { getData } from '../../utils/api';
+import Section from '../UI/Section';
+
+const altBackground = function (index) {
+  return index % 2 !== 0;
+};
 
 class Services extends Component {
   state = {
@@ -20,7 +24,7 @@ class Services extends Component {
     return (
       <div>
         { services && services.map((service, index) => (
-          <Service data={service.fields} key={service.sys.id} index={index} />
+          <Section data={service.fields} key={service.sys.id} altBackground={altBackground(index)} />
         ))}
       </div>
     );
