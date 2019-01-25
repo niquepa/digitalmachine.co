@@ -4,7 +4,7 @@ import Video from '../Video/Video';
 import Services from '../Services/Services';
 import Contact from '../Contact/Contact';
 
-const App = props => (
+const App = () => (
   <React.Fragment>
     <Header />
     <Video />

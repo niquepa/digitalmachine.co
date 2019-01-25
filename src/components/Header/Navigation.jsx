@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
+import { t } from 'ttag';
 import { Collapse, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { saveLocale } from '../../utils/i18n/i18nInit';
+
+const setLocale = locale => (ev) => {
+  ev.preventDefault();
+  saveLocale(locale);
+  window.location.reload();
+};
 
 class Navigation extends Component {
   render() {
@@ -8,30 +16,30 @@ class Navigation extends Component {
       <Collapse isOpen={isOpen} navbar>
         <Nav className="ml-auto" navbar>
           <NavItem>
-            <NavLink href="#">SERVICIOS</NavLink>
+            <NavLink href="#">{ t`Services` }</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">PROCESO</NavLink>
+            <NavLink href="#">{ t`Process` }</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">CLIENTES</NavLink>
+            <NavLink href="#">{ t`Customers` }</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">NOSOTROS</NavLink>
+            <NavLink href="#">{ t`About Us` }</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">CONTACTO</NavLink>
+            <NavLink href="#">{ t`Contact` }</NavLink>
           </NavItem>
           <UncontrolledDropdown nav inNavbar>
             <DropdownToggle nav caret>
-              Language
+              { t`Language` }
             </DropdownToggle>
             <DropdownMenu right>
               <DropdownItem>
-                English
+                <a href="/" onClick={setLocale('en')}>{ t`English` }</a>
               </DropdownItem>
               <DropdownItem>
-                Spanish
+                <a href="/" onClick={setLocale('es')}>{ t`Spanish` }</a>
               </DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
