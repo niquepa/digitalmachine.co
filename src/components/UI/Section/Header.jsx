@@ -11,7 +11,7 @@ const SectionHeader = (props) => {
         <div className="vertical-line">
           <div className="circle-bottom" />
         </div>
-        <div className="info-vertical text-center">
+        <div className="info-vertical">
           <h1 className="luxury-font" dangerouslySetInnerHTML={{ __html: title }} />
           {/* TODO: Review lead class */}
           <p className="lead">{description}</p>
