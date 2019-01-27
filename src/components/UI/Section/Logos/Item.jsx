@@ -10,7 +10,7 @@ const SectionLogosItem = (props) => {
   return (
     <div className="col-sm-6 col-md-4 text-center">
       { image &&
-        <img src={image.file.url} alt={image.title} className="img-fluid" />
+        <img src={image.file.url} alt={image.title} className="img-fluid tech-logo" />
       }
     </div>
 
