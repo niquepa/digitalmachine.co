@@ -67,7 +67,7 @@ msgstr "Nombre"
 msgid "Email"
 msgstr "Email"
 
-#: src/components/Contact/Form.jsx:58
+#: src/components/Contact/Form.jsx:59
 msgid "Let's chat"
 msgstr "Hablemos ahora"
 
@@ -86,3 +86,7 @@ msgstr "Inglés"
 #: src/components/Header/Navigation.jsx:42
 msgid "Spanish"
 msgstr "Español"
+
+#: src/components/UI/Footer/index.jsx:11
+msgid "All rights reserved"
+msgstr "Todos los derechos reservados"

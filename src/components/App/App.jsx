@@ -3,6 +3,7 @@ import Header from '../Header/Header';
 import Video from '../Video/Video';
 import Services from '../Services/Services';
 import Contact from '../Contact/Contact';
+import Footer from '../UI/Footer';
 
 const App = () => (
   <React.Fragment>
@@ -10,6 +11,7 @@ const App = () => (
     <Video />
     <Services />
     <Contact />
+    <Footer />
   </React.Fragment>
 );
 
