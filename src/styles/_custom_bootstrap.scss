@@ -409,3 +409,17 @@ footer h3{
   text-align: center;
   font-weight: bold;
 }
+
+#loader {
+  position: absolute;
+  z-index: 1;
+  width: 90%;
+  height: 100%;
+  background-color: $gold;
+  /*left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  margin: -100px 0 0 -100px;*/
+}

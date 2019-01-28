@@ -1,13 +1,54 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { t } from 'ttag';
+import { ReCaptcha } from 'react-recaptcha-google';
+import FormLoader from '../UI/Misc/Loader';
+import { getLocale } from '../../utils/i18n/i18nInit';
 
 class ContactForm extends Component {
   state = {
     name: '',
     email: '',
-    phone: '',
+    lang: getLocale(),
+    loading: false,
   };
+
+  onLoadRecaptcha = () => {
+    if (this.dmCaptcha) {
+      this.dmCaptcha.reset();
+    }
+  }
+
+  executeCaptcha = (event) => {
+    event.preventDefault();
+
+    if (this.dmCaptcha) {
+      this.dmCaptcha.reset();
+      this.dmCaptcha.execute();
+    }
+
+    this.setState({ loading: true });
+  }
+
+  verifyCallback = (recaptchaToken) => {
+    // console.log(recaptchaToken, '<= your recaptcha token');
+    this.handleSubmit();
+  }
+
+  handleSubmit = () => {
+    const template = 'dm-contact-home';
+    const { name, email, lang } = this.state;
+
+    this.sendFeedback(
+      template,
+      name,
+      email,
+      lang,
+    );
+
+    this.setState({ loading: false });
+    this.props.formSubmitted();
+  }
 
   handleChange = (event) => {
     const { name, value } = event.target;
@@ -16,28 +57,12 @@ class ContactForm extends Component {
     });
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-
-    const template = 'dm-contact-home';
-    const { name, email, phone } = this.state;
-
-    this.sendFeedback(
-      template,
-      name,
-      email,
-      phone,
-    );
-
-    this.props.formSubmitted();
-  }
-
-  sendFeedback = (templateId, name, email, phone) => {
+  sendFeedback = (templateId, name, email, lang) => {
     window.emailjs
       .send('mailgun', templateId, {
         name,
         email,
-        phone,
+        lang,
       })
       .then((res) => {
         console.log('Email sent');
@@ -45,18 +70,50 @@ class ContactForm extends Component {
       .catch(err => console.error('Failed to send feedback. Error: ', err));
   }
 
+
   render() {
-    // const { formSubmitted } = this.props;
+    const { loading } = this.state;
+
     return (
       <div className="col-md-8">
-        <form id="form" onSubmit={this.handleSubmit}>
-          <input id="name" type="text" placeholder={ t`Name` } name="name" value={this.state.name} onChange={this.handleChange} required />
-          <input id="email" type="email" placeholder={ t`Email` } name="email" value={this.state.email} onChange={this.handleChange} required />
-          { /* Todo: Make ReCaptcha invisible */ }
-          <div className="g-recaptcha" data-sitekey="6Le57osUAAAAACEF0_s3mZIRPZIq8z0V4n4ggb2a" />
-          <input type="submit" name="Submit" value={ t`Let's chat` } className="btn btn-primary btn-lg" />
-        </form>
-        <div id="result" />
+        <div className="text-center">
+          <FormLoader isVisible={loading} />
+          <form id="form" onSubmit={this.executeCaptcha}>
+            <input
+              id="name"
+              type="text"
+              placeholder={t`Name`}
+              name="name"
+              value={this.state.name}
+              onChange={this.handleChange}
+              required
+            />
+            <input
+              id="email"
+              type="email"
+              placeholder={t`Email`}
+              name="email"
+              value={this.state.email}
+              onChange={this.handleChange}
+              required
+            />
+            <input type="submit" name="Submit" value={t`Let's chat`} className="btn btn-primary btn-lg" />
+            {
+              window.grecaptcha ? <ReCaptcha
+                ref={(el) => {
+                  this.dmCaptcha = el;
+                }}
+                size="invisible"
+                render="explicit"
+                sitekey="6LeYJY0UAAAAAITgASi9GRD843exoi0eescDR8jX"
+                onloadCallback={this.onLoadRecaptcha}
+                verifyCallback={this.verifyCallback}
+                data-badge="inline"
+                hl={getLocale()}
+              /> : null
+            }
+          </form>
+        </div>
       </div>
     );
   }
