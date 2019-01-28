@@ -3,9 +3,7 @@ import { getData } from '../../utils/api';
 import Section from '../UI/Section';
 import { t } from 'ttag';
 
-const altBackground = function (index) {
-  return index % 2 !== 0;
-};
+const altBackground = index => index % 2 !== 0;
 
 class Services extends Component {
   state = {

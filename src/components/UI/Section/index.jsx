@@ -32,7 +32,7 @@ const Section = (props) => {
 
 Section.propTypes = {
   data: PropTypes.object, // TODO: Validate object
-  altBackground: PropTypes.boolean,
+  altBackground: PropTypes.bool,
 };
 
 export default Section;
