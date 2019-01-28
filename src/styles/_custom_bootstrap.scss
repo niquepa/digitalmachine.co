@@ -153,6 +153,7 @@ nav.primary {
   font-weight: lighter;
   width: 85%;
   margin: 0 auto;
+  text-align: center;
 }
 
 .info-vertical p {
@@ -359,4 +360,52 @@ address i {
 .pagination > .active > a{
   background-color: $metallic-luxury !important;
   background: $metallic-luxury !important;
+}
+
+.tech-logo {
+  max-width: 50%;
+}
+
+// ***************
+// FOOTER
+// ***************
+
+footer{
+  background-color: #1C1C1C;
+  padding: 40px 0 0 0;
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+}
+.footer_top:before{
+  -webkit-transition-duration: 0.3s;
+  content: '';
+  right: 50%;
+  margin-right: -30px;
+  border-top: 30px solid #f7f5f2;
+  top: 0;
+  position: absolute;
+  z-index: 999;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+}
+footer p{
+  margin: 0;
+  font-weight: lighter;
+  font-size: 15px;
+}
+footer h3{
+  font-size: 18px;
+  color: $metallic-luxury;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #2c2c2c;
+}
+
+.coopring{
+  //background: #fff;
+  color: $metallic-luxury;
+  padding: 20px 0;
+  text-align: center;
+  font-weight: bold;
 }

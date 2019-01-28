@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { t } from 'ttag';
-import { Collapse, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import { saveLocale } from '../../utils/i18n/i18nInit';
+import { Collapse, Nav, NavItem, NavLink } from 'reactstrap';
+import PropTypes from 'prop-types';
+import { saveLocale, getLocale } from '../../utils/i18n/i18nInit';
 
 const setLocale = locale => (ev) => {
   ev.preventDefault();
@@ -9,44 +10,40 @@ const setLocale = locale => (ev) => {
   window.location.reload();
 };
 
-class Navigation extends Component {
-  render() {
-    const { isOpen } = this.props;
-    return (
-      <Collapse isOpen={isOpen} navbar>
-        <Nav className="ml-auto" navbar>
-          <NavItem>
-            <NavLink href="#">{ t`Services` }</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#">{ t`Process` }</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#">{ t`Customers` }</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#">{ t`About Us` }</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#">{ t`Contact` }</NavLink>
-          </NavItem>
-          <UncontrolledDropdown nav inNavbar>
-            <DropdownToggle nav caret>
-              { t`Language` }
-            </DropdownToggle>
-            <DropdownMenu right>
-              <DropdownItem>
-                <a href="/" onClick={setLocale('en')}>{ t`English` }</a>
-              </DropdownItem>
-              <DropdownItem>
-                <a href="/" onClick={setLocale('es')}>{ t`Spanish` }</a>
-              </DropdownItem>
-            </DropdownMenu>
-          </UncontrolledDropdown>
-        </Nav>
-      </Collapse>
-    );
-  }
-}
+const EsLang = () => (
+  <NavLink href="/" onClick={setLocale('es')}>{ t`Spanish` }</NavLink>
+);
+const EnLang = () => (
+  <NavLink href="/" onClick={setLocale('en')}>{ t`English` }</NavLink>
+);
+
+const Navigation = (props) => {
+  const { isOpen } = props;
+
+  const langSwitcher = getLocale() === 'en' ? <EsLang /> : <EnLang />;
+
+  return (
+    <Collapse isOpen={isOpen} navbar>
+      <Nav className="ml-auto" navbar>
+        <NavItem>
+          <NavLink href={`#${t`Services`}`}>{ t`Services` }</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href={`#${t`Technologies`}`}>{ t`Technologies` }</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href={`#${t`Contact`}`}>{ t`Contact` }</NavLink>
+        </NavItem>
+        <NavItem>
+          { langSwitcher }
+        </NavItem>
+      </Nav>
+    </Collapse>
+  );
+};
+
+Navigation.propTypes = {
+  isOpen: PropTypes.bool,
+};
 
 export default Navigation;

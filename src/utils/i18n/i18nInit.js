@@ -3,7 +3,7 @@ import * as cookie from './cookie';
 
 const LOCALE_COOKIE = '__locale';
 
-function getLocale() {
+export function getLocale() {
   return cookie.get(LOCALE_COOKIE) || 'en';
 }
 
@@ -19,3 +19,6 @@ if (locale !== 'en') {
   addLocale(locale, translationsObj);
   useLocale(locale);
 }
+
+// yarn ttag update src/utils/i18n/es.po src/
+// yarn ttag po2json src/utils/i18n/es.po > src/utils/i18n/es.po.json
