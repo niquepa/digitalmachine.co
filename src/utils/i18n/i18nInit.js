@@ -3,7 +3,7 @@ import * as cookie from './cookie';
 
 const LOCALE_COOKIE = '__locale';
 
-function getLocale() {
+export function getLocale() {
   return cookie.get(LOCALE_COOKIE) || 'en';
 }
 

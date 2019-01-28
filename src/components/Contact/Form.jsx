@@ -49,11 +49,9 @@ class ContactForm extends Component {
     // const { formSubmitted } = this.props;
     return (
       <div className="col-md-8">
-        <h4 className="luxury-font">{ t`Chat with Us Now` }</h4>
         <form id="form" onSubmit={this.handleSubmit}>
           <input id="name" type="text" placeholder={ t`Name` } name="name" value={this.state.name} onChange={this.handleChange} required />
           <input id="email" type="email" placeholder={ t`Email` } name="email" value={this.state.email} onChange={this.handleChange} required />
-          <input id="phone" type="number" placeholder={ t`Phone` } name="phone" value={this.state.phone} onChange={this.handleChange} required />
           { /* Todo: Make ReCaptcha invisible */ }
           <div className="g-recaptcha" data-sitekey="6Le57osUAAAAACEF0_s3mZIRPZIq8z0V4n4ggb2a" />
           <input type="submit" name="Submit" value={ t`Let's chat` } className="button" />
