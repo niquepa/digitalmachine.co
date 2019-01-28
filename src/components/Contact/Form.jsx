@@ -54,7 +54,7 @@ class ContactForm extends Component {
           <input id="email" type="email" placeholder={ t`Email` } name="email" value={this.state.email} onChange={this.handleChange} required />
           { /* Todo: Make ReCaptcha invisible */ }
           <div className="g-recaptcha" data-sitekey="6Le57osUAAAAACEF0_s3mZIRPZIq8z0V4n4ggb2a" />
-          <input type="submit" name="Submit" value={ t`Let's chat` } className="button" />
+          <input type="submit" name="Submit" value={ t`Let's chat` } className="btn btn-primary btn-lg" />
         </form>
         <div id="result" />
       </div>

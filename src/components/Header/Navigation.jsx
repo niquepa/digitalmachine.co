@@ -32,7 +32,7 @@ const Navigation = (props) => {
           <NavLink href={`#${t`Technologies`}`}>{ t`Technologies` }</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href={`#${t`Contact`}`}>{ t`Contact` }</NavLink>
+          <NavLink href={`#${t`Let's chat`}`}>{ t`Let's chat` }</NavLink>
         </NavItem>
         <NavItem>
           { langSwitcher }
