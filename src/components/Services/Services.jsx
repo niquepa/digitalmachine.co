@@ -1,19 +1,30 @@
 import React, { Component } from 'react';
-import ServicesHorizontal from './ServicesHorizontal';
-import ServiceHorizontalItems from './ServiceHorizontalItems';
+import { getData } from '../../utils/api';
+import Section from '../UI/Section';
+import { t } from 'ttag';
+
+const altBackground = index => index % 2 !== 0;
 
 class Services extends Component {
+  state = {
+    data: null,
+  }
+
+  componentDidMount = () => {
+    getData('services')
+      .then((data) => {
+        this.setState({ data });
+      });
+  }
+
   render() {
+    const services = this.state.data;
+
     return (
-      <div>
-        <div>
-          <ServicesHorizontal data="web" />
-          <ServiceHorizontalItems data="webItems" />
-        </div>
-        <div className="borders gray-background">
-          <ServicesHorizontal data="media" />
-          <ServiceHorizontalItems data="mediaItems" />
-        </div>
+      <div id={t`Services`}>
+        { services && services.map((service, index) => (
+          <Section data={service.fields} key={service.sys.id} altBackground={altBackground(index)} />
+        ))}
       </div>
     );
   }

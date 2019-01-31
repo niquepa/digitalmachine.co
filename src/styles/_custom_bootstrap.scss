@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Roboto Slab', serif;
+  font-family: $font-family;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -43,12 +43,43 @@ p {
 
 .gray-background {
   background: #f5f5f5;
-  //padding: 4.375em 0;
+}
+
+.luxury-color {
+  color: $metallic-luxury;
+}
+
+.luxury-font {
+  font-family: $font-family-luxury;
+  font-style: italic;
+}
+
+.white  {
+  color: $white;
 }
 
 // ***************
 // NAVIGATION
 // ***************
+
+nav.transparent {
+  background-color: $primary;
+}
+
+@include media-breakpoint-up(md) {
+  nav.transparent {
+    background-color: transparent;
+  }
+}
+
+nav.primary {
+  background-color: $primary;
+}
+
+.navbar-dark .navbar-brand {
+  color: $metallic-luxury;
+}
+
 .navbar-dark .navbar-nav .nav-link {
   color: $white;
   font-weight: lighter;
@@ -56,7 +87,7 @@ p {
 
 .navbar-dark .nav-item.active .nav-link,
 .navbar-dark .nav-item .nav-link:hover {
-  color: $red;
+  color: $metallic-luxury;
   font-weight: lighter;
 }
 
@@ -109,7 +140,6 @@ p {
 }
 
 .info-vertical {
-  text-align: center;
   max-width: 850px;
   margin: 0 auto;
   z-index: 1;
@@ -123,35 +153,38 @@ p {
   font-weight: lighter;
   width: 85%;
   margin: 0 auto;
+  text-align: center;
 }
 
 .info-vertical p {
   font-size: 1em;
   line-height: 1.556em;
-  font-weight: lighter;
+  font-weight: 400;
   margin: 0;
   width: 100%;
 }
 
 .info-vertical span {
-  color: $red;
+  color: $metallic-luxury;
 }
 
 .paddings {
-  padding: 70px 0;
+  padding: 3em 0;
 }
 
 .service-item {
-  text-align: center;
+  padding: 1.250em 0em;
 }
 
-.service-item .caption-service-item h3 {
-  font-weight: lighter;
+@include media-breakpoint-up(sm) {
+  .service-item {
+    padding: 0em;
+  }
+}
+
+.caption-service-item h3 {
+  //font-weight: lighter;
   padding: 0.625em 0;
-}
-
-.icon-header {
-  color: $red;
 }
 
 // ***************
@@ -168,23 +201,41 @@ p {
   background: $black;
 }
 
+.video-container .overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  background: $black;
+  opacity: 0.7;
+}
+
 .video-container .title-container {
   z-index: 1000;
   position: absolute;
   top: 35%;
-  width: 100%;
-  text-align: center;
-  color: #fff;
+  width:100%;
 }
 
 .video-container .title-container h1 {
-  color: $white;
   font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 100;
+  padding: 0em;
+  letter-spacing: 0.05em;
+}
+.video-container .title-container h2 {
+  font-size: 1.8em;
+  padding: 0em;
+  letter-spacing: 0.05em;
 }
 .video-container .description .inner {
-  font-size: 2em;
+  font-size: 1em;
   width: 45%;
-  margin: 0 auto;
+  letter-spacing: 0.05em;
+  font-weight: 300;
 }
 
 .video-container video {
@@ -195,16 +246,180 @@ p {
   .video-container .title-container h1 {
     font-size: 2.5em;
   }
+  .video-container .title-container h2 {
+    font-size: 2.3em;
+  }
 }
 
 @include media-breakpoint-up(md) {
   .video-container .title-container h1 {
     font-size: 3em;
   }
+  .video-container .title-container h2 {
+    font-size: 2.7em;
+  }
 }
 
 @include media-breakpoint-up(lg) {
   .video-container .title-container h1 {
-    font-size: 4em;
+    font-size: 4.5em;
   }
+  .video-container .title-container h2 {
+    font-size: 4.5em;
+  }
+}
+
+// ***************
+// CONTACT FORM
+// ***************
+
+address {
+  line-height: 35px;
+}
+
+address strong {
+  padding-right: 3px;
+}
+
+address i {
+  padding-right: 10px;
+}
+
+#form input{
+  width: 85%;
+  height: 35px;
+  margin-bottom: 20px;
+  border:1px solid #dedede;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+#form textarea{
+  width: 95%;
+  height: 150px;
+  font-size: 14px;
+  padding: 5px 10px;
+  border:1px solid #dedede;
+}
+#form .button{
+  width: auto;
+  height: auto;
+}
+#form #result{
+  font-size: bold;
+}
+
+.button{
+  width: auto;
+  border: 0;
+  color: #fff;
+  margin: 10px 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-weight: 300;
+  padding: 12px 25px;
+  text-shadow: 0 -1px 0 #ccc;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.button:hover{
+  color: #fff;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.btn-primary{
+  border: 0 !important;
+}
+.button i{
+  padding-right: 10px;
+  color: #232323;
+  font-size: 25px;
+}
+
+.sf-menu li li a:hover,
+.camera_wrap .camera_pag .camera_pag_ul li.cameracurrent > span,
+.camera_prevThumbs, .camera_nextThumbs, .camera_prev, .camera_next, .camera_commands, .camera_thumbs_cont,
+.camera_wrap .camera_pag .camera_pag_ul li.cameracurrent > span,
+.button,
+.btn-primary,
+.caption-head:hover,
+.flex-control-paging li a.flex-active,
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span,
+.info_skin_base,
+#theme-options .active,
+.service-02 .head-service-02 i,
+.post-date,
+.more-link a,
+.pagination > .active > a{
+  background-color: $metallic-luxury !important;
+  background: $metallic-luxury !important;
+}
+
+.tech-logo {
+  max-width: 50%;
+}
+
+// ***************
+// FOOTER
+// ***************
+
+footer{
+  background-color: #1C1C1C;
+  padding: 40px 0 0 0;
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+}
+.footer_top:before{
+  -webkit-transition-duration: 0.3s;
+  content: '';
+  right: 50%;
+  margin-right: -30px;
+  border-top: 30px solid #f7f5f2;
+  top: 0;
+  position: absolute;
+  z-index: 999;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+}
+footer p{
+  margin: 0;
+  font-weight: lighter;
+  font-size: 15px;
+}
+footer h3{
+  font-size: 18px;
+  color: $metallic-luxury;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #2c2c2c;
+}
+
+.coopring{
+  //background: #fff;
+  color: $metallic-luxury;
+  padding: 20px 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+#loader {
+  position: absolute;
+  z-index: 1;
+  width: 90%;
+  height: 100%;
+  background-color: $gold;
+  /*left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  margin: -100px 0 0 -100px;*/
 }

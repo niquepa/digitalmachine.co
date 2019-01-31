@@ -1,0 +1,82 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals = 2; plural = (n !== 1);\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/components/Contact/Contact.jsx:35
+msgid "Chat with Us Now"
+msgstr "Habla con nosotros ahora"
+
+#: src/components/Contact/Contact.jsx:37
+msgid ""
+"Want to chat about your project/problem? Enter your Name and Email Address "
+"and we'll contact you right away!"
+msgstr ""
+"Quieres hablar acerca de un nuevo proyecto/problema? Ingresa tu nombre y "
+"dirección de correo y te contactaremos inmediatamante!"
+
+#: src/components/Contact/Contact.jsx:46
+msgid "The Office"
+msgstr "La Oficina"
+
+#: src/components/Contact/Contact.jsx:49
+msgid "Address:"
+msgstr "Dirección"
+
+#: src/components/Contact/Contact.jsx:50
+msgid "City:"
+msgstr "Ciudad"
+
+#: src/components/Contact/Contact.jsx:51
+msgid "Phone"
+msgstr "Teléfono"
+
+#: src/components/Header/Navigation.jsx:29
+#: src/components/Services/Services.jsx:26
+msgid "Services"
+msgstr "Servicios"
+
+#: src/components/Contact/Contact.jsx:30
+#: src/components/Header/Navigation.jsx:35
+msgid "Contact"
+msgstr "Hablemos"
+
+#: src/components/Contact/Form.jsx:53
+msgid "Name"
+msgstr "Nombre"
+
+#: src/components/Contact/Form.jsx:54
+msgid "Email"
+msgstr "Email"
+
+#: src/components/Contact/Form.jsx:57
+msgid "Let's chat"
+msgstr "Hablemos ahora"
+
+#: src/components/Contact/Message.jsx:6
+msgid "We got your info"
+msgstr "Tenemos tu información"
+
+#: src/components/Contact/Message.jsx:7
+msgid "We'll contact you very soon!"
+msgstr "Te contactaremos muy pronto"
+
+#: src/components/Header/Navigation.jsx:17
+msgid "English"
+msgstr "Inglés"
+
+#: src/components/Header/Navigation.jsx:14
+msgid "Spanish"
+msgstr "Español"
+
+#: src/components/UI/Footer/index.jsx:11
+msgid "All rights reserved"
+msgstr "Todos los derechos reservados"
+
+#: src/components/Header/Navigation.jsx:32
+#: src/components/UI/Section/Logos/index.jsx:13
+msgid "Technologies"
+msgstr "Tecnologías"

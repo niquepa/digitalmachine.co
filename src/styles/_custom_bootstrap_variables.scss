@@ -21,6 +21,7 @@ $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
+$gold:    #EEE8AA !default;
 
 // Array of colors from _variables.scss
 $theme-colors: (
@@ -33,3 +34,7 @@ $theme-colors: (
         light: $gray-100,
         dark: $gray-800
 ) !default;
+
+$metallic-luxury:       #D4AF37 !default;
+$font-family:           'Roboto Slab', serif !default;
+$font-family-luxury:    'Expletus Sans', cursive !default;

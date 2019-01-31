@@ -1,31 +1,4 @@
-const video = {
-  caption: 'We are Digital Transformation',
-  altText: 'People do not buy goods and services. They buy relations, stories and magic',
-};
-
-const webService = {
-  src: 'https://images.contentful.com/9kkanfiwhjvs/hK4MpKFX6EKQQSsOAg6kw/316c57c921b795c03d75d9709c7bafa5/pexels-photo-433604.jpeg?w=1440&h=960',
-  altText: "We're your digital partner, closely collaborating to build an incredible online experience for your users We combine Technical expertise with Strategic planning to achieve your business goals.",
-  caption: 'We make <span>Web</span> and <span>Mobile</span> Apps',
-};
-
-const webServiceItems = [
-  {
-    icon: 'far fa-newspaper',
-    altText: 'Content Management Systems',
-    caption: 'CMS',
-  },
-  {
-    icon: 'fas fa-cart-arrow-down',
-    altText: 'Spree Commerce store or marketplace development, integration, customization, migration',
-    caption: 'E-commerce',
-  },
-  {
-    icon: 'fab fa-buromobelexperte',
-    altText: 'Design and development of Mobile-Ready websites using Responsive Web Design (RWD)',
-    caption: 'Responsive Design',
-  },
-];
+import { loadContent } from './contentfulClient';
 
 const mediaService = {
   src: 'https://images.contentful.com/9kkanfiwhjvs/hK4MpKFX6EKQQSsOAg6kw/316c57c921b795c03d75d9709c7bafa5/pexels-photo-433604.jpeg?w=1440&h=960',
@@ -51,22 +24,36 @@ const mediaServiceItems = [
   },
 ];
 
+const getVideo = () => (
+  loadContent({ contentTypeId: 'homeVideo', limit: 1 })
+    .then(data => (data[0] ? data[0].fields : ''))
+);
+
+const getServices = () => (
+  loadContent({ contentTypeId: 'service', limit: 6, order: 'fields.order' })
+    .then(data => (data))
+    // .then(data => console.log(`SERVICE DATA: ${JSON.stringify(data)}`))
+);
+
+const getTechnologies = () => (
+  loadContent({ contentTypeId: 'technology', limit: 5, order: 'fields.order' })
+    .then(data => (data))
+);
+
 export const getData = (content) => {
   switch (content) {
     case 'video':
-      return video;
-      break;
-    case 'web':
-      return webService;
-      break;
-    case 'webItems':
-      return webServiceItems;
-      break;
+      return getVideo();
+    case 'services':
+      return getServices();
     case 'media':
       return mediaService;
     case 'mediaItems':
       return mediaServiceItems;
+    case 'technologies':
+      return getTechnologies();
     default:
       return null;
   }
 };
+
