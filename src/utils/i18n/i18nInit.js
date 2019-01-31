@@ -32,5 +32,30 @@ if (locale !== 'en') {
   useLocale(locale);
 }
 
+/*
+METATAGS FUNCTIONS
+*/
+const addLocaleToUrl = (url, toLocale) => `/${toLocale}${url}`;
+
+const removeLocaleFromUrl = (url, toLocale) => url.replace(`/${toLocale}`, '') || '/';
+
+export const urlLocalized = (url, fromLocale, toLocale) => {
+  // console.log(`Params URL:*${url}* FROM:*${fromLocale}* TO:*${toLocale}*`);
+  let localized = url;
+  if (fromLocale === toLocale) {
+    // console.log('SON IGUALES')
+    localized = url;
+  } else if (fromLocale === 'en') {
+    // console.log('FROM ES EN')
+    localized = addLocaleToUrl(url, toLocale);
+  } else if (toLocale === 'en') {
+    // console.log('TO ES EN')
+    localized = removeLocaleFromUrl(url, fromLocale);
+  }
+
+  // console.log(`LOCALE:*${toLocale}* URL:*${localized}*`);
+  return `${window.location.protocol}//${window.location.hostname}${localized}`;
+};
+
 // yarn ttag update src/utils/i18n/es.po src/
 // yarn ttag po2json src/utils/i18n/es.po > src/utils/i18n/es.po.json
