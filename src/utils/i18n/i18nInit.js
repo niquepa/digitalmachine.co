@@ -11,7 +11,19 @@ export function saveLocale(locale) {
   cookie.set(LOCALE_COOKIE, locale);
 }
 
+export function checkLocaleinUrl() {
+  const match = /^\/(es|en)/gi.exec(window.location.pathname);
+  if (match && typeof match[1] !== 'undefined') {
+    if (getLocale() !== match[1]) {
+      saveLocale(match[1]);
+    }
+  } else {
+    saveLocale('en');
+  }
+}
+
 // setup
+checkLocaleinUrl();
 const locale = getLocale();
 
 if (locale !== 'en') {

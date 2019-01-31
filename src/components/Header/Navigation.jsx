@@ -2,19 +2,14 @@ import React from 'react';
 import { t } from 'ttag';
 import { Collapse, Nav, NavItem, NavLink } from 'reactstrap';
 import PropTypes from 'prop-types';
-import { saveLocale, getLocale } from '../../utils/i18n/i18nInit';
+import { getLocale } from '../../utils/i18n/i18nInit';
 
-const setLocale = locale => (ev) => {
-  ev.preventDefault();
-  saveLocale(locale);
-  window.location.reload();
-};
-
+// TODO: Keep the current url and redirect to the desired language
 const EsLang = () => (
-  <NavLink href="/" onClick={setLocale('es')}>{ t`Spanish` }</NavLink>
+  <NavLink href="/es">{ t`Spanish` }</NavLink>
 );
 const EnLang = () => (
-  <NavLink href="/" onClick={setLocale('en')}>{ t`English` }</NavLink>
+  <NavLink href="/">{ t`English` }</NavLink>
 );
 
 const Navigation = (props) => {

@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import { loadReCaptcha } from 'react-recaptcha-google';
-import Header from '../Header/Header';
-import Video from '../Video/Video';
-import Services from '../Services/Services';
-import Contact from '../Contact/Contact';
-import Footer from '../UI/Footer';
-
+import Home from '../../pages/Home';
+import Contact from '../../pages/Contact';
 
 class App extends Component {
   componentDidMount() {
@@ -14,13 +11,10 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <Header />
-        <Video />
-        <Services />
-        <Contact />
-        <Footer />
-      </React.Fragment>
+      <Switch>
+        <Route path="/:locale(en|es)?/contact" component={Contact} />
+        <Route exact path="/:locale(en|es)?" component={Home} />
+      </Switch>
     );
   }
 }
