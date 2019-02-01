@@ -1,30 +1,34 @@
 import { addLocale, useLocale } from 'ttag';
 import * as cookie from './cookie';
 
-const LOCALE_COOKIE = '__locale';
+//const LOCALE_COOKIE = '__locale';
 
 export function getLocale() {
-  return cookie.get(LOCALE_COOKIE) || 'en';
+  //return cookie.get(LOCALE_COOKIE) || 'en';
+  return checkLocaleinUrl();
 }
 
-export function saveLocale(locale) {
-  cookie.set(LOCALE_COOKIE, locale);
-}
+//export function saveLocale(locale) {
+//  cookie.set(LOCALE_COOKIE, locale);
+//}
 
 export function checkLocaleinUrl() {
-  const match = /^\/(es|en)/gi.exec(window.location.pathname);
+  const match = /^\/(es)/gi.exec(window.location.pathname);
   if (match && typeof match[1] !== 'undefined') {
-    if (getLocale() !== match[1]) {
-      saveLocale(match[1]);
-    }
+    //if (getLocale() !== match[1]) {
+      //saveLocale(match[1]);
+      return match[1];
+    //}
   } else {
-    saveLocale('en');
+    //saveLocale('en');
+    return "en";
   }
 }
 
 // setup
-checkLocaleinUrl();
-const locale = getLocale();
+//checkLocaleinUrl();
+//const locale = getLocale();
+const locale = checkLocaleinUrl();
 
 if (locale !== 'en') {
   const translationsObj = require(`./${locale}.po.json`);
