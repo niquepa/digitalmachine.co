@@ -6,14 +6,25 @@ import { getLocale, urlLocalized } from '../../utils/i18n/i18nInit';
 class MetaTags extends Component {
   render() {
     const locale = getLocale();
+    const {
+      title, description, image, video,
+    } = this.props.metaData;
     const { pathname } = this.props.location;
     return (
       <React.Fragment>
         <Helmet>
           <html lang={locale} />
-          <title>DigitalMachine</title>
+          <title>{ title }</title>
           <link rel="alternate" hrefLang="es" href={urlLocalized(pathname, locale, 'es')} />
           <link rel="alternate" hrefLang="x-default" href={urlLocalized(pathname, locale, 'en')} />
+          {/* <FbTags locale={locale} location={this.props.location} /> TODO: Helmet doesnt allow Fragments */}
+          <meta property="og:site_name" content="DigitalMachine" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={window.location.href} />
+          { title && <meta property="og:title" content={title} /> }
+          { description && <meta property="og:description" content={description} /> }
+          { image && <meta property="og:image" content={image} /> }
+          { video && <meta property="og:video" content={video} /> }
         </Helmet>
       </React.Fragment>
     );
@@ -22,6 +33,11 @@ class MetaTags extends Component {
 
 MetaTags.propTypes = {
   location: PropTypes.object, // TODO: Validate object
+  metaData: PropTypes.object, // TODO: Validate object
+  //title: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  video: PropTypes.string,
 };
 
 export default MetaTags;

@@ -18,41 +18,38 @@ msgstr ""
 "Quieres hablar acerca de un nuevo proyecto/problema? Ingresa tu nombre y "
 "dirección de correo y te contactaremos inmediatamante!"
 
-#: src/components/Contact/Contact.jsx:46
+#: src/components/Contact/Contact.jsx:45
 msgid "The Office"
 msgstr "La Oficina"
 
-#: src/components/Contact/Contact.jsx:49
+#: src/components/Contact/Contact.jsx:48
 msgid "Address:"
 msgstr "Dirección"
 
-#: src/components/Contact/Contact.jsx:50
+#: src/components/Contact/Contact.jsx:49
 msgid "City:"
 msgstr "Ciudad"
 
-#: src/components/Contact/Contact.jsx:51
+#: src/components/Contact/Contact.jsx:50
 msgid "Phone"
 msgstr "Teléfono"
 
-#: src/components/Header/Navigation.jsx:29
-#: src/components/Services/Services.jsx:26
+#: src/components/Header/Navigation.jsx:24
+#: src/components/Services/Services.jsx:24
 msgid "Services"
 msgstr "Servicios"
 
-#: src/components/Contact/Contact.jsx:30
-#: src/components/Header/Navigation.jsx:35
-msgid "Contact"
-msgstr "Hablemos"
-
-#: src/components/Contact/Form.jsx:53
+#: src/components/Contact/Form.jsx:85
 msgid "Name"
 msgstr "Nombre"
 
-#: src/components/Contact/Form.jsx:54
+#: src/components/Contact/Form.jsx:94
 msgid "Email"
 msgstr "Email"
 
-#: src/components/Contact/Form.jsx:57
+#: src/components/Contact/Contact.jsx:30
+#: src/components/Contact/Form.jsx:100
+#: src/components/Header/Navigation.jsx:30
 msgid "Let's chat"
 msgstr "Hablemos ahora"
 
@@ -64,11 +61,11 @@ msgstr "Tenemos tu información"
 msgid "We'll contact you very soon!"
 msgstr "Te contactaremos muy pronto"
 
-#: src/components/Header/Navigation.jsx:17
+#: src/components/Header/Navigation.jsx:12
 msgid "English"
 msgstr "Inglés"
 
-#: src/components/Header/Navigation.jsx:14
+#: src/components/Header/Navigation.jsx:9
 msgid "Spanish"
 msgstr "Español"
 
@@ -76,7 +73,21 @@ msgstr "Español"
 msgid "All rights reserved"
 msgstr "Todos los derechos reservados"
 
-#: src/components/Header/Navigation.jsx:32
+#: src/components/Header/Navigation.jsx:27
 #: src/components/UI/Section/Logos/index.jsx:13
 msgid "Technologies"
 msgstr "Tecnologías"
+
+#: src/pages/Home.jsx:14
+msgid "DIGITAL TRANSFORMATION for your business"
+msgstr "TRANSFORMACIÓN DIGITAL para tu negocio"
+
+#: src/pages/Home.jsx:15
+msgid ""
+"Co-Create with our clients the vision of the future step by step: We carry "
+"out together an analysis of how the current digital assets are, what the "
+"needs are and what our clients have as a vision of the future."
+msgstr ""
+"Somos su socio digital, colaborando estrechamente para crear una experiencia "
+"en línea increíble para sus usuarios. Combinamos la experiencia técnica con la "
+"planificación estratégica para lograr sus objetivos comerciales."
