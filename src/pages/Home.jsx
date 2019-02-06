@@ -13,8 +13,7 @@ class Home extends Component {
     const metaData = {
       title: t`DIGITAL TRANSFORMATION for your business`,
       description: t`Co-Create with our clients the vision of the future step by step: We carry out together an analysis of how the current digital assets are, what the needs are and what our clients have as a vision of the future.`,
-      image: 'http://ia.media-imdb.com/images/rock.jpg',
-      video: 'http://example.com/bond/trailer.swf',
+      image: 'https://images.ctfassets.net/9kkanfiwhjvs/3gCyvS0nWUUgewkEcyKWq8/57c470677bccf8346c6092191c4f107c/digitalmachine-share.jpg',
     };
 
     return (
