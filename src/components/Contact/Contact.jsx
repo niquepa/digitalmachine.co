@@ -45,8 +45,8 @@ class Contact extends Component {
                     <h4 className="luxury-font">{ t`The Office` }</h4>
                     <address>
                       <strong className="luxury-font luxury-color"> Digital Machine, Inc.</strong><br />
-                      <i className="fa fa-map-marker-alt luxury-color" /> <strong>{ t`Address:` } </strong> 10850 62nd Dr, Suite 2E<br />
-                      <i className="fa fa-city luxury-color" /> <strong>{ t`City:` } </strong>Forest Hills, NY 11375<br />
+                      <i className="fa fa-map-marker-alt luxury-color" /> <strong>{ t`Address:` } </strong> 3111 Garfield Pl<br />
+                      <i className="fa fa-city luxury-color" /> <strong>{ t`City:` } </strong>Fair Lawn, NJ 07410<br />
                       <i className="fa fa-mobile-alt luxury-color" /> <abbr title={t`Phone`}>P:</abbr> (917) 330-1301
                     </address>
                   </aside>
