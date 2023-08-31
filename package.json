@@ -14,10 +14,11 @@
     "react-recaptcha-google": "^1.1.1",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.0",
+    "react-scripts": "1.1.1",
     "reactstrap": "^5.0.0-beta",
     "ttag": "^1.6.0",
-    "ttag-cli": "^1.6.0"
+    "ttag-cli": "^1.6.0",
+    "@snyk/protect": "latest"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src/styles --include-path ./node_modules src/styles/ -o src/styles/",
@@ -26,7 +27,9 @@
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "eslint": "^4.17.0",
@@ -34,5 +37,6 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.1"
-  }
+  },
+  "snyk": true
 }
