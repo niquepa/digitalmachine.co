@@ -17,7 +17,7 @@
     "react-scripts": "1.1.0",
     "reactstrap": "^5.0.0-beta",
     "ttag": "^1.6.0",
-    "ttag-cli": "^1.6.0"
+    "ttag-cli": "^1.7.26"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src/styles --include-path ./node_modules src/styles/ -o src/styles/",
